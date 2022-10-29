@@ -121,16 +121,12 @@ public class HeadPhonesServiceImpl implements HeadPhonesService {
 		Optional<HeadPhonesEntity> dbData = headPhonesRepository.findById(id);
 		if (dbData.isEmpty()) {
 			apiResponse.setMessage(GlobalConstant.dataUpdateFail);
-		}else {
-//			HeadPhonesEntity getData = 
-			headPhonesEntity = dbData.get();
-			headPhonesEntity.setHeadPhoneName(headPhonesEntityModel.getHeadPhoneName());
-			headPhonesEntity.setHeadPhoneModel(headPhonesEntityModel.getHeadPhoneModel());
-			headPhonesEntity.setHeadPhoneColor(headPhonesEntityModel.getHeadPhoneColor());
-			headPhonesEntity.setHeadPhoneQuality(headPhonesEntityModel.getHeadPhoneQuality());
-			headPhonesEntity.setHeadPhonePrice(headPhonesEntityModel.getHeadPhonePrice());
-			headPhonesRepository.save(headPhonesEntity);
-			apiResponse.setMessage(GlobalConstant.dataUpdateSuccess);
+		}
+		else {
+//			for (h iterable_element : iterable) {
+//				
+//			}
+			
 		}
 
 		return apiResponse;
